@@ -1,0 +1,27 @@
+Set Up a Auctions API Service
+
+0.1. run 
+dotnet --info 
+to check the information on the dotnet
+
+0.2. run 
+dotnet new list
+to check the definition of each command
+
+1. create a new solution C#
+by running the command
+dotnet new sln
+as this will create a new solution file the same name as the folder
+
+2. create a new webapi
+using the commmand
+dotnet new webapi -o src/AuctionService --use-controller
+
+3. store the newly created src/AuctionService folder into the solution file
+
+4. make sure to get the C# DevKit Extention
+
+5. run the api by using the command
+
+cd src/AuctionService
+dotnet watch

@@ -1,0 +1,5 @@
+Press Crtl + Shift + P
+
+and serach for nuget view
+
+then a small window of nuget will be appear below

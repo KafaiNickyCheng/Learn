@@ -1,0 +1,9 @@
+Create the DbInitializer.cs in the Data folder
+
+Seed the data it is like insert into our database
+with initial data
+
+after adding the file with the datas 
+then run the command
+
+dotnet ef database drop

@@ -1,0 +1,37 @@
+Put Project Into GitHub
+
+1. You need to have an account forr GitHub
+
+1.5 tell the git of who you are
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+2. we save stuffs that we created ourselves
+so the folder like bin, object we don't include
+
+3. run the command
+git init
+to get the repo
+
+4. create the gitignore file by command
+dotnet new gitignore
+
+5. create a main branch
+git branch -M main
+
+6. commit our changes
+git add .
+
+git commit -m "<commit descrp>"
+
+7. create a new repository in the github account
+
+8. and run the command present into repository
+git remote add origin https://github.com/KafaiNickyCheng/Learning.git
+
+9. then push the commit
+git push origin main
+
+Testing Adding This changes

@@ -1,0 +1,22 @@
+First Commit Creating repo
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git init
+dotnet new gitignore
+git branch -M main
+git add .
+git commit -m "<commit descrp>"
+git remote add origin https://github.com/KafaiNickyCheng/Learning.git
+git push origin main
+
+Pushing Commit
+
+git branch -M main
+git add .
+git commit -m "<commit descrp>"
+git push origin main
+
+if found any problem in git control
+
+Make sure to delete all .git hidden folders

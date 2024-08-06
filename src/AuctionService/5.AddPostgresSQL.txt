@@ -1,0 +1,46 @@
+In the appSettings.Development.json file
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection" : "Server=localhost:5432;User Id=postgres;Password=postgrespw;Database=auction"
+  }
+}
+
+And also in the appSettings.json file
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection" : "Server=localhost:5432;User Id=postgres;Password=postgrespw;Database=auction"
+  }
+}
+
+Add a DefaultConnection string as given 
+
+Open the terminal
+
+0.1 check the dotnet tool by running
+dotnet tool list -g 
+
+0.2 install the dotnet tool by running
+dotnet tool install dotnet-ef -g
+
+0.3 make sure you cd into the src folder
+cd src/AuctionService
+
+1. create a new migration set up the schema
+dotnet ef migrations add "InitialCreate" -o Data/Migrations
+
+(The Migrations is like the log of updating the database)

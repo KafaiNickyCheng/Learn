@@ -1,0 +1,24 @@
+Data Transfer Object
+
+This will Shape our data (like mapping)
+
+So a Dto should be like split into different shape of data
+
+The Standard Shape (AuctionDto)
+
+The Shape when the user is gonna insert the value (CreateAuctionDto)
+ 
+and The Shape when the user is gonna updated the value (UpdateAuctionDto)
+
+
+Once Created these 3 Dtos then add a new folder
+inside of the src/AuctionService
+
+called RequestHelpers
+
+and inside of our RequestHelper is where we put our auto mapper inside
+(See Comments in code)
+
+And Inside the program.cs you need to add
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

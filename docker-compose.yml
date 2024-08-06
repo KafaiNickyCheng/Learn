@@ -1,0 +1,11 @@
+services: # provides the service
+  postgres: # given a database name
+    image: postgres
+    environment: # set up the environment
+      - POSTGRES_PASSWORD=postgrespw # password of the database
+    ports: # tell docker of which port the server is running
+      - 5432:5432
+    volumes: # tell docker to use external storage
+      - pgdata:/var/lib/postresql/data
+volumes:
+  pgdata:

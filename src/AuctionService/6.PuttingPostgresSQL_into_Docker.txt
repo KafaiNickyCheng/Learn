@@ -1,0 +1,56 @@
+Now we got our PostgresSQL then we now need to put our database
+into the Docker Container
+
+So we need to create a DockerCompose file in order to tell
+what it is need to be running on docker
+
+0.1 install the docker extentions
+
+1. In the root directory (outside of the src folder)
+Create a new file name call
+docker-compose.yml
+
+2. write the instruction code
+
+services: # provides the service
+  postgres: # given a database name
+    image: postgres
+    environment: # set up the environment
+      - POSTGRES_PASSWORD=postgrespw # password of the database
+    ports: # tell docker of which port the server is running
+      - 5432:5432
+    volumes: # tell docker to use external storage
+      - pgdata:/var/lib/postresql/data
+volumes:
+  pgdata:
+
+
+3. run the docker by (make sure to move out of the src folder)
+docker compose up -d 
+
+4. take a look in the docker desktop app
+then go to the container tab and you should see docker is running
+
+5.  go back to src/AuctionService folder
+cd src/AuctionService
+
+then run the command
+dotnet ef database update
+
+(this will add our table to our docker backend server)
+
+6. go to extentions
+install PostgresSQL
+
+7. in the vscode go to the Postgres Tab
+then add connection (a + sign)
+hostname --> localhost
+user --> postgres
+password --> postgrespw
+port --> 5432
+ssl connection --> Standard connection
+database name --> Auction
+displayname of database --> localhost
+
+
+

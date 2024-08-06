@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable> --> this make the string able to not explicity using the ? to tell that the string is nullable
+    <ImplicitUsings>enable</ImplicitUsings> --> this will help us not to write down the common using (import) of the solution file
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+  -- this block will tell the application to use the swagger 
+  -- which in this case we will use the postman so this can be remove
+
+</Project>
