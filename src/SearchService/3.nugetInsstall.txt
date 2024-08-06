@@ -1,0 +1,4 @@
+Add MongoDB
+
+1. MongoDB.Entities
+2. AutoMapper.Extensions.Microsoft

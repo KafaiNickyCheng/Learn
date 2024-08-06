@@ -1,0 +1,7 @@
+1. create a web api
+
+dotnet new webapi -o src/SearchService
+
+2. create a new solution inside the solution file
+
+dotnet sln add src/SearchService

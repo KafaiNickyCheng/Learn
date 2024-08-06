@@ -1,0 +1,13 @@
+MongoDB is a noSQL
+
+it does not use tables but use as a documented
+
+1. Install MongoDB
+
+2. Add a new service in docker compose file
+
+3. run a new docker compose command : no need to stop running docker
+
+docker compose up -d
+
+4. download MongoDB extension for vscode
