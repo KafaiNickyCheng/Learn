@@ -1,0 +1,42 @@
+For our first approach we put the
+auctions.json data directly in our data folder
+
+but we now get that data from between MicroServices
+
+1. Add a new Folder call Services
+
+2. Inside of the Services folder add a AuctionSvcHttpClient.cs file
+
+3. add the url in the appsetting.development.json
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "MongoDbConnection": "mongodb://root:mongopw@localhost"
+  },
+  "AuctionServiceUrl" : "http://localhost:7001"
+}
+
+4. Inside the program.cs file add the service
+
+builder.Services.AddHttpClient<AuctionSvcHttpClient>();
+
+5. Change the DbInitializer to get the data from the httpClient Instead
+
+6. reset the docker for MongoDB Service
+By Deleting It
+
+then recompose it
+by command 
+
+docker compose up -d
+
+or delete the  volume by using the command
+
+docker volume list
+docker volume rm <volume name>

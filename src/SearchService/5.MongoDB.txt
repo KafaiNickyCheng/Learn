@@ -11,3 +11,15 @@ it does not use tables but use as a documented
 docker compose up -d
 
 4. download MongoDB extension for vscode
+
+5. open MongoDb tab
+Add Connection
+Choose Advance Form
+url
+mongodb://localhost:27017
+
+set up in the docker-compose.yml file
+username : root
+password : mongopw
+
+(docker need to be run in order to connect successful)

@@ -1,0 +1,23 @@
+Let say you have two Service and need to communicate
+
+
+Service A  ----------- Request -------------> Service B
+           <----------- Response ------------
+
+So Service A need to know the address of the Service B
+
+we can use Http or gRPC to communicate
+
+Http is synchronus messaging
+
+but the code we write in the microservice async
+
+but even that the client still need to wait the Response
+
+And This is not good beacuse if Service A need data from Service B
+then Service B need to start first
+Otherwise if Service A start first then it cannot fetch the data and it will failed
+
+Or Otherwise Service A need to keep calling and calling Service B in loop until it get running
+
+

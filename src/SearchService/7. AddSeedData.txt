@@ -1,0 +1,10 @@
+At least just dummy data to test if the search function is working
+
+1. add a new folder call
+Data
+
+Add the auction.json dummy data
+
+Add the DbInitializer
+
+(Move the code from Program.cs into the DbINitializer)

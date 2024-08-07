@@ -1,0 +1,9 @@
+In the Controller Folder add a new Controller
+
+After adding a Search Engine to the Controller
+
+Add a new folder call RequestHelper
+
+Inside the RequestHelper folder
+
+add a SearchParams class

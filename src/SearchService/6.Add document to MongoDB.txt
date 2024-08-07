@@ -1,0 +1,40 @@
+1. create a folder call
+Models 
+inside the SearchService
+
+2. create a model class
+
+3. In the program.cs file
+Add a config
+
+// MongoDB call
+
+await DB.InitAsync("SearchDB", MongoClientSettings
+    .FromConnectionString(builder.Configuration.GetConnectionString("MongoDbConnection")));
+
+// giving the document an index
+await DB.Index<Item>()
+    .Key(x => x.Make, KeyType.Text)
+    .Key(x => x.Model, KeyType.Text)
+    .Key(x => x.Color, KeyType.Text)
+    .CreateAsync();
+
+4. in the appsetting.development.json add config
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "MongoDbConnection": "mongodb://root:mongopw@localhost"
+  }
+}
+
+5. run command 
+
+dotnet build
+
+dotnet watch

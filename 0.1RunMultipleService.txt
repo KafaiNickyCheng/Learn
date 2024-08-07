@@ -1,0 +1,2 @@
+src/AuctionService Terminal1
+src/SearchService Terminal2

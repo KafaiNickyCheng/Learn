@@ -6,7 +6,7 @@ services: # provides the service
     ports: # tell docker of which port the server is running
       - 5432:5432
     volumes: # tell docker to use external storage
-      - pgdata:/var/lib/postresql/data
+      - /var/lib/postresql/data # annonymouse volume
   mongodb:
     image: mongo
     environment:
@@ -15,7 +15,4 @@ services: # provides the service
     ports:
       - 27017:27017
     volumes:
-      - mongodata:/var/lib/mongodb/data
-volumes:
-  pgdata:
-  mongodata:
+      - /var/lib/mongodb/data # annoynymous volume
